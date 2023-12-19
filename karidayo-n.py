@@ -3,12 +3,13 @@ import sys
 from pygame import *
 from os.path import abspath, dirname
 from random import choice
-
+#pathの設定
 BASE_PATH = abspath(dirname(__file__))
 FONT_PATH = BASE_PATH + '/fonts/'
 IMAGE_PATH = BASE_PATH + '/images/'
 SOUND_PATH = BASE_PATH + '/sounds/'
 
+#色の設定
 # Colors (R, G, B)
 WHITE = (255, 255, 255)
 GREEN = (78, 255, 87)
@@ -19,6 +20,7 @@ RED = (237, 28, 36)
 
 SCREEN = display.set_mode((800, 600))
 FONT = FONT_PATH + 'space_invaders.ttf'
+#画像名
 IMG_NAMES = ['kokaton', 'mystery',
              'enemy1_1', 'enemy1_2',
              'enemy2_1', 'enemy2_2',
@@ -33,7 +35,7 @@ ENEMY_DEFAULT_POSITION = 65  # Initial value for a new game
 ENEMY_MOVE_DOWN = 35
 
 WIDTH, HEIGHT = 800, 600
-
+#こうかとん画像(味方)の設定
 class Ship(sprite.Sprite):
     def __init__(self):
         sprite.Sprite.__init__(self)
